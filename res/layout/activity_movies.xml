@@ -1,0 +1,31 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="#FFFFFF"
+    tools:context="net.mobileblizzard.intime.MoviesActivity" >
+
+        <!-- MOVIES VIEW -->
+    <FrameLayout android:id="@+id/moviesView" android:layout_width="match_parent" android:layout_height="match_parent">
+
+	        <!-- movies content -->
+	        <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:scrollbars="none">	            
+	          <LinearLayout android:paddingTop="45dp" android:id="@+id/moviesContentUI" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">           	            	            	           	            
+	            	
+	          </LinearLayout>	                      		            
+	        </ScrollView>
+	        <!-- movies content -->	        
+        
+	        <!-- top actionbar -->
+	        <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content" 
+	            android:background="#F2FFFFFF" android:padding="8dp">
+	        	<FrameLayout android:id="@+id/moviesBackBTN" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/back_button_white" android:clickable="true">
+	        	    <ImageView android:src="@drawable/arrow427" android:contentDescription="@string/back" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+	        	</FrameLayout> 
+	        	<TextView android:text="@string/title_activity_movies" android:textSize="16sp" android:textColor="#000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center" />           
+	        </FrameLayout>
+	        <!-- top actionbar -->	                	    
+	    
+    </FrameLayout>
+    <!-- /MOVIES VIEW -->
+
+</FrameLayout>

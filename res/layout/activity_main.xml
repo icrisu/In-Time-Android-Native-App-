@@ -1,0 +1,305 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#141515"
+    tools:context="net.mobileblizzard.intime.MainActivity" >
+            
+    
+    <!-- camera preview -->
+    <FrameLayout android:id="@+id/cameraPreview" android:layout_width="match_parent" android:layout_height="match_parent" />
+    <!-- /camera preview -->
+    
+
+    <!-- black screen transparent -->
+    <FrameLayout android:id="@+id/blackScreenUI" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:background="#000000" />
+    <!-- /black screen transparent -->
+    
+    <!-- start delay menu -->
+    <FrameLayout android:id="@+id/startDelayMenu" android:visibility="gone" android:layout_width="300px" android:layout_height="300px" android:layout_gravity="center" android:background="@drawable/start_delay_background">        
+        <TextView android:id="@+id/delayInfoTXT" android:textColor="#FFFFFF" android:textSize="100sp" android:textStyle="bold" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center" />
+        <ImageView android:src="@drawable/timer18" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_marginTop="13dp" android:layout_height="wrap_content" android:contentDescription="@string/app_name"/>
+        <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_gravity="bottom" android:layout_marginBottom="20dp">
+            <TextView android:text="@string/starting_in" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="#FFFFFF" android:layout_gravity="center_horizontal" />
+        </FrameLayout>
+        <!-- stop start -->
+        <FrameLayout android:id="@+id/stopStartUI" android:visibility="gone" android:layout_width="80px" android:layout_height="80px" android:layout_gravity="right" android:layout_marginTop="180px" android:layout_marginRight="0px" android:background="@drawable/stop_start_back" >
+            <ImageView android:src="@drawable/pause11" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/app_name" />
+        </FrameLayout>
+    </FrameLayout>    	
+    <!-- /start delay menu -->
+    
+    
+    <!-- thread menu -->
+    <FrameLayout android:id="@+id/threadMenu" android:visibility="gone" android:layout_width="300px" android:layout_height="300px" android:layout_gravity="center" android:background="@drawable/start_delay_background">        
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_gravity="center_vertical" android:paddingLeft="15dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="10dp">
+                <ImageView android:layout_marginRight="8dp" android:src="@drawable/timer18" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/app_name"/>
+                <TextView android:id="@+id/threadMinTxt" android:text="100 min" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="#FFFFFF" android:textSize="16sp" android:layout_gravity="center_vertical" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:layout_marginRight="8dp" android:src="@drawable/pictures1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/app_name"/>
+                <TextView android:id="@+id/threadFramesTxt" android:text="" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="#FFFFFF" android:textSize="16sp" android:layout_gravity="center_vertical" />
+            </LinearLayout>                        
+        </LinearLayout>
+        <!-- stop -->
+        <FrameLayout android:id="@+id/stopThreadUI" android:visibility="gone" android:layout_width="80px" android:layout_height="80px" android:layout_gravity="right" android:layout_marginTop="180px" android:layout_marginRight="0px" android:background="@drawable/stop_start_back" >
+            <ImageView android:src="@drawable/stop_thread" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/app_name" />
+        </FrameLayout>        
+    </FrameLayout>    	
+    <!-- /thread delay menu -->    
+    
+    
+    <!-- mainmenu -->
+    <net.mobileblizzard.intime.menus.MainMenu android:id="@+id/mainMenuUI" android:layout_width="match_parent" android:layout_height="match_parent">
+        
+        <!-- menu items -->
+        <FrameLayout android:id="@+id/mainMenuItems" android:visibility="gone" android:background="#00FFFFFF" android:layout_width="360px" android:layout_height="360px" android:layout_gravity="center">            
+
+            <net.mobileblizzard.intime.menus.MainMenuItem android:id="@+id/playBTN" android:layout_width="70px" android:layout_height="70px" android:background="@drawable/main_menu_item" android:clickable="true">
+            	<ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/play" android:contentDescription="@string/menu_start" android:layout_gravity="center" />    
+            </net.mobileblizzard.intime.menus.MainMenuItem>            
+            
+            <net.mobileblizzard.intime.menus.MainMenuItem android:id="@+id/settingsBTN" android:layout_width="70px" android:layout_height="70px" android:background="@drawable/main_menu_item" android:clickable="true">
+            	<ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/cog" android:contentDescription="@string/menu_settings" android:layout_gravity="center" />    
+            </net.mobileblizzard.intime.menus.MainMenuItem>
+            
+            <net.mobileblizzard.intime.menus.MainMenuItem android:id="@+id/moviesBTN" android:layout_width="70px" android:layout_height="70px" android:background="@drawable/main_menu_item" android:clickable="true" >
+            	<ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/film" android:contentDescription="@string/menu_timelaps" android:layout_gravity="center" />    
+            </net.mobileblizzard.intime.menus.MainMenuItem> 
+            
+            <net.mobileblizzard.intime.menus.MainMenuItem android:id="@+id/deleteBTN" android:layout_width="70px" android:layout_height="70px" android:background="@drawable/main_menu_item" android:clickable="true">
+            	<ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/delete_ico" android:contentDescription="@string/menu_movies" android:layout_gravity="center" />    
+            </net.mobileblizzard.intime.menus.MainMenuItem> 
+            
+            <net.mobileblizzard.intime.menus.MainMenuItem android:id="@+id/infoBTN" android:layout_width="70px" android:layout_height="70px" android:background="@drawable/main_menu_item" android:clickable="true">
+            	<ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/info" android:contentDescription="@string/menu_info" android:layout_gravity="center"  />    
+            </net.mobileblizzard.intime.menus.MainMenuItem>            
+            
+            
+            <!-- 
+            
+            <ImageView android:id="@+id/moviesBTN" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/film" android:contentDescription="@string/app_name" />
+            <ImageView android:id="@+id/imagesBTN" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/images" android:contentDescription="@string/app_name" />
+            <ImageView android:id="@+id/playBTN" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/play" android:contentDescription="@string/app_name" />
+             -->
+        </FrameLayout>
+        <!-- /menu items -->        
+        
+        <!-- plus button -->
+        <net.mobileblizzard.intime.menus.MainMenuPlus android:id="@+id/plusButton" android:layout_width="70dp" android:layout_height="70dp" android:layout_gravity="center" 
+            android:background="@drawable/plus_button" android:clickable="true">
+        	    <ImageView android:id="@+id/plusIco" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/plus_60_s1" android:layout_gravity="center" android:contentDescription="@string/app_name" />
+        </net.mobileblizzard.intime.menus.MainMenuPlus>
+        <!-- /plus button -->      
+        
+    </net.mobileblizzard.intime.menus.MainMenu>
+    <!-- /mainmenu -->
+    
+    <!-- SETTINGS VIEW -->
+    <FrameLayout android:id="@+id/settingsView" android:visibility="gone" android:clickable="true" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" 
+        android:background="#CC10a6a0">
+        <!-- settings wrapper -->
+	    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">	        
+	        <!-- top actionbar -->
+	        <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content" 
+	            android:background="#7310a6a0" android:padding="8dp">
+	        	<FrameLayout android:id="@+id/settingsBackBTN" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/back_button_white" android:clickable="true">
+	        	    <ImageView android:src="@drawable/thin35" android:contentDescription="@string/back" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+	        	</FrameLayout> 
+	        	<TextView android:text="@string/settings_title" android:textSize="16sp" android:textColor="#FFFFFF" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center" />           
+	        </FrameLayout>
+	        <!-- top actionbar -->
+	        
+	        <!-- settings content -->
+	        <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:scrollbars="none">
+	            
+	          <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+	            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="8dp" android:layout_marginTop="15dp" android:layout_marginBottom="15dp" android:orientation="horizontal">
+	                <!-- Seconds time -->
+	                <TextView android:text="@string/photos_interval" android:textSize="13sp" android:textColor="#FFFFFF" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:layout_gravity="center_vertical" />
+	                                
+	                <net.mobileblizzard.intime.components.spiner.CustomSpinner android:id="@+id/photoIntervalSpinnerUI" android:layout_height="wrap_content" android:layout_width="wrap_content" android:orientation="horizontal">
+	                    <FrameLayout android:id="@+id/intervalMinus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:clickable="true" android:background="@drawable/spinner_button">
+	                    	<ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/minus_btn" android:contentDescription="@string/app_name" />    
+	                    </FrameLayout>                    
+	                    <TextView android:id="@+id/intervalInfo" android:textSize="20sp" android:layout_width="40dp" android:layout_height="wrap_content" android:textColor="#FFFFFF" android:layout_marginLeft="7dp" android:layout_marginRight="7dp" android:maxLines="1" android:gravity="center_horizontal" />                    
+	                    <FrameLayout android:id="@+id/intervalPlus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:clickable="true" android:background="@drawable/spinner_button">
+	                    	<ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/plus_btn" android:contentDescription="@string/app_name" />    
+	                    </FrameLayout>                                                                                                                        
+	                </net.mobileblizzard.intime.components.spiner.CustomSpinner>               
+	            </LinearLayout>
+	            
+	            <FrameLayout android:layout_width="match_parent" android:layout_height="10dp" android:background="#7310a6a0" />
+	            
+	            <!-- max duration -->
+	            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="8dp" android:layout_marginTop="15dp" android:layout_marginBottom="15dp" android:orientation="horizontal">
+	                <TextView android:text="@string/max_duration" android:textSize="13sp" android:textColor="#FFFFFF" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:layout_gravity="center_vertical" />
+	                
+	                <net.mobileblizzard.intime.components.spiner.CustomSpinner android:id="@+id/hoursSpinnerUI" android:layout_height="wrap_content" android:layout_width="wrap_content" android:orientation="horizontal">
+	                    <FrameLayout android:id="@+id/hoursMinus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:clickable="true" android:background="@drawable/spinner_button">
+	                    	<ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/minus_btn" android:contentDescription="@string/app_name" />    
+	                    </FrameLayout>                    
+	                    <TextView android:id="@+id/hoursInfo" android:textSize="20sp" android:layout_width="40dp" android:layout_height="wrap_content" android:textColor="#FFFFFF" android:layout_marginLeft="7dp" android:layout_marginRight="7dp" android:maxLines="1" android:gravity="center_horizontal" />                    
+	                    <FrameLayout android:id="@+id/hoursPlus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:clickable="true" android:background="@drawable/spinner_button">
+	                    	<ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/plus_btn" android:contentDescription="@string/app_name" />    
+	                    </FrameLayout>                                                                                                                        
+	                </net.mobileblizzard.intime.components.spiner.CustomSpinner>
+	                              
+	            </LinearLayout>  
+	            
+	            <FrameLayout android:layout_width="match_parent" android:layout_height="10dp" android:background="#7310a6a0" />
+	            
+	            <!-- keep screen on -->            
+	            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="8dp" android:layout_marginTop="15dp" android:layout_marginBottom="15dp" android:orientation="horizontal">
+	                <TextView android:text="@string/keep_screen_on" android:textSize="13sp" android:textColor="#FFFFFF" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:layout_gravity="center_vertical" />                
+	                <net.mobileblizzard.intime.components.spiner.CustomCheckbox android:id="@+id/screenCB" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+	            </LinearLayout>
+	            
+	            
+	            <FrameLayout android:layout_width="match_parent" android:layout_height="10dp" android:background="#7310a6a0" />
+	            
+	            <!-- resolution -->            
+	            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="8dp" android:layout_marginTop="15dp" android:layout_marginBottom="15dp" android:orientation="horizontal">
+	                <TextView android:text="@string/photos_resolution" android:textSize="13sp" android:textColor="#FFFFFF" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:layout_gravity="center_vertical" />                
+	                <LinearLayout android:id="@+id/resolutionBTN" android:layout_width="wrap_content" android:layout_height="wrap_content" android:clickable="true" android:orientation="horizontal" android:background="@drawable/resolution_button" android:paddingLeft="8dp" android:paddingTop="5dp" android:paddingRight="8dp" android:paddingBottom="5dp">
+	                    <TextView android:id="@+id/resolutionInfo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="#FFFFFF" android:layout_gravity="center_vertical" />
+	                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/app_name" android:layout_marginLeft="15dp" android:src="@drawable/bullet4" />
+	                </LinearLayout>
+	            </LinearLayout>   
+	            
+	            
+	            <FrameLayout android:layout_width="match_parent" android:layout_height="10dp" android:background="#7310a6a0" />
+	            
+	            
+	            <!-- delay -->
+	            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="8dp" android:layout_marginTop="15dp" android:layout_marginBottom="15dp" android:orientation="horizontal">
+	                <TextView android:text="@string/start_delay" android:textSize="13sp" android:textColor="#FFFFFF" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:layout_gravity="center_vertical" />
+	                
+	                <net.mobileblizzard.intime.components.spiner.CustomSpinner android:id="@+id/delaySpinnerUI" android:layout_height="wrap_content" android:layout_width="wrap_content" android:orientation="horizontal">
+	                    <FrameLayout android:id="@+id/delayMinus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:clickable="true" android:background="@drawable/spinner_button">
+	                    	<ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/minus_btn" android:contentDescription="@string/app_name" />    
+	                    </FrameLayout>                    
+	                    <TextView android:id="@+id/delayInfo" android:textSize="20sp" android:layout_width="40dp" android:layout_height="wrap_content" android:textColor="#FFFFFF" android:layout_marginLeft="7dp" android:layout_marginRight="7dp" android:maxLines="1" android:gravity="center_horizontal" />                    
+	                    <FrameLayout android:id="@+id/delayPlus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:clickable="true" android:background="@drawable/spinner_button">
+	                    	<ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/plus_btn" android:contentDescription="@string/app_name" />    
+	                    </FrameLayout>                                                                                                                        
+	                </net.mobileblizzard.intime.components.spiner.CustomSpinner>	                              
+	            </LinearLayout>            
+	            
+	            
+	            <FrameLayout android:layout_width="match_parent" android:layout_height="10dp" android:background="#7310a6a0" />
+	            
+	            <!-- white balance -->            
+	            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="8dp" android:layout_marginTop="15dp" android:layout_marginBottom="15dp" android:orientation="horizontal">
+	                <TextView android:text="@string/white_balance" android:textSize="13sp" android:textColor="#FFFFFF" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:layout_gravity="center_vertical" />                
+	                <LinearLayout android:id="@+id/sceneBTN" android:layout_width="wrap_content" android:layout_height="wrap_content" android:clickable="true" android:orientation="horizontal" android:background="@drawable/resolution_button" android:paddingLeft="8dp" android:paddingTop="5dp" android:paddingRight="8dp" android:paddingBottom="5dp">
+	                    <TextView android:id="@+id/sceneInfo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="#FFFFFF" android:layout_gravity="center_vertical" />
+	                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/app_name" android:layout_marginLeft="15dp" android:src="@drawable/bullet4" />
+	                </LinearLayout>
+	            </LinearLayout>
+	            
+	            
+	            <FrameLayout android:layout_width="match_parent" android:layout_height="10dp" android:background="#7310a6a0" />
+	            
+	            <!-- focus balance -->            
+	            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="8dp" android:layout_marginTop="15dp" android:layout_marginBottom="15dp" android:orientation="horizontal">
+	                <TextView android:text="@string/focus_mode" android:textSize="13sp" android:textColor="#FFFFFF" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:layout_gravity="center_vertical" />                
+	                <LinearLayout android:id="@+id/focusBTN" android:layout_width="wrap_content" android:layout_height="wrap_content" android:clickable="true" android:orientation="horizontal" android:background="@drawable/resolution_button" android:paddingLeft="8dp" android:paddingTop="5dp" android:paddingRight="8dp" android:paddingBottom="5dp">
+	                    <TextView android:id="@+id/focusInfo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="#FFFFFF" android:layout_gravity="center_vertical" />
+	                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/app_name" android:layout_marginLeft="15dp" android:src="@drawable/bullet4" />
+	                </LinearLayout>
+	            </LinearLayout>
+	            
+	            
+	            <FrameLayout android:layout_width="match_parent" android:layout_height="10dp" android:background="#7310a6a0" />
+	            
+	            <!-- color efx -->            
+	            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="8dp" android:layout_marginTop="15dp" android:layout_marginBottom="15dp" android:orientation="horizontal">
+	                <TextView android:text="@string/color_effect" android:textSize="13sp" android:textColor="#FFFFFF" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:layout_gravity="center_vertical" />                
+	                <LinearLayout android:id="@+id/colorBTN" android:layout_width="wrap_content" android:layout_height="wrap_content" android:clickable="true" android:orientation="horizontal" android:background="@drawable/resolution_button" android:paddingLeft="8dp" android:paddingTop="5dp" android:paddingRight="8dp" android:paddingBottom="5dp">
+	                    <TextView android:id="@+id/colorInfo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="#FFFFFF" android:layout_gravity="center_vertical" />
+	                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/app_name" android:layout_marginLeft="15dp" android:src="@drawable/bullet4" />
+	                </LinearLayout>
+	            </LinearLayout>
+	            
+	            
+	            <FrameLayout android:layout_width="match_parent" android:layout_height="10dp" android:background="#7310a6a0" />
+	            
+	            <!-- flash modes -->            
+	            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="8dp" android:layout_marginTop="15dp" android:layout_marginBottom="15dp" android:orientation="horizontal">
+	                <TextView android:text="@string/flash_mode" android:textSize="13sp" android:textColor="#FFFFFF" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:layout_gravity="center_vertical" />                
+	                <LinearLayout android:id="@+id/flashBTN" android:layout_width="wrap_content" android:layout_height="wrap_content" android:clickable="true" android:orientation="horizontal" android:background="@drawable/resolution_button" android:paddingLeft="8dp" android:paddingTop="5dp" android:paddingRight="8dp" android:paddingBottom="5dp">
+	                    <TextView android:id="@+id/flashInfo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="#FFFFFF" android:layout_gravity="center_vertical" />
+	                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/app_name" android:layout_marginLeft="15dp" android:src="@drawable/bullet4" />
+	                </LinearLayout>
+	            </LinearLayout>	            	            	            
+	            	            
+	            
+	            
+	            
+	          </LinearLayout>
+	                      	
+	            
+	        </ScrollView>
+	        <!-- settings content -->	        	        
+	    </LinearLayout>
+	    <!-- /settings wrapper -->
+	    
+	    <!-- chooserUI -->
+	    <FrameLayout android:id="@+id/settingsChooserUI" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:clickable="true">
+		    <FrameLayout android:id="@+id/settingsChooserUIBlack" android:layout_width="match_parent" android:layout_height="250dp" android:background="#D9000000" android:layout_gravity="center_vertical">
+		        <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:scrollbars="none">
+		            <LinearLayout android:id="@+id/settingsChooserUIContent" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+		                
+		            </LinearLayout>
+		        </ScrollView>
+		        <FrameLayout android:id="@+id/closeSettingsChooserUI" android:layout_width="wrap_content" android:layout_height="wrap_content" android:padding="5dp" android:layout_gravity="right">
+		            <ImageView android:src="@drawable/cross37" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/app_name" />
+		        </FrameLayout>
+		    </FrameLayout>	        
+	    </FrameLayout>
+	    
+
+	    
+    </FrameLayout>
+    <!-- /SETTINGS VIEW -->
+    
+    
+    
+    
+    <!-- confirmUI -->
+    <FrameLayout android:id="@+id/confirmChooserUI" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:clickable="true">
+	    <FrameLayout android:id="@+id/confirmChooserUIBlack" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="#D9000000" android:layout_gravity="center_vertical">
+	        <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:scrollbars="none">
+	            <LinearLayout android:padding="30dp" android:id="@+id/confirmChooserUIContent" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+	                
+	                <TextView android:id="@+id/confirmInfo" android:layout_width="200dp" android:layout_height="match_parent" android:gravity="center" android:layout_gravity="center_horizontal" android:textColor="#FFFFFF" />
+	                <FrameLayout android:layout_width="150dp" android:layout_height="1px" android:background="#4De4e4e4" android:layout_marginTop="15dp" android:layout_marginBottom="15dp" android:layout_gravity="center_horizontal"></FrameLayout>
+	                
+	                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+	                    <FrameLayout android:layout_width="1dp" android:layout_height="wrap_content" android:layout_weight="1">
+	                        <FrameLayout android:id="@+id/yesBTN" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="right" android:layout_marginRight="20dp" android:padding="10dp" android:clickable="true" android:background="@drawable/yes_no_button">
+	                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/yes" android:textColor="#FFFFFF"/>
+	                        </FrameLayout>
+	                    </FrameLayout>
+	                    
+	                    <FrameLayout android:layout_width="1dp" android:layout_height="wrap_content" android:layout_weight="1">
+	                        <FrameLayout android:id="@+id/noBTN" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="left" android:layout_marginLeft="20dp" android:padding="10dp" android:clickable="true" android:background="@drawable/yes_no_button">
+	                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/no" android:textColor="#FFFFFF"/>
+	                        </FrameLayout>
+	                    </FrameLayout>	                    
+	                    
+	                </LinearLayout>
+	                
+	            </LinearLayout>
+	        </ScrollView>
+	        <FrameLayout android:id="@+id/closeConfirmChooserUI" android:layout_width="wrap_content" android:layout_height="wrap_content" android:padding="5dp" android:layout_gravity="right">
+	            <ImageView android:src="@drawable/cross37" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/app_name" />
+	        </FrameLayout>
+	    </FrameLayout>	        
+    </FrameLayout>
+    <!-- /confirmUI -->
+    
+
+</FrameLayout>

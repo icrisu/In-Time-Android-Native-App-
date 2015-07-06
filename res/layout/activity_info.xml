@@ -1,0 +1,105 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="#FFFFFF"
+    tools:context="net.mobileblizzard.intime.InfoActivity" >
+
+    <!-- INFO VIEW -->
+    <FrameLayout android:id="@+id/moviesView" android:layout_width="match_parent" android:layout_height="match_parent">
+
+	        <!-- info content -->
+	        <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:scrollbars="none">	            
+	          <LinearLayout android:paddingTop="45dp" android:id="@+id/moviesContentUI" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">           	            	            	           	            
+	            	
+	              <!-- item -->
+	              <LinearLayout android:layout_margin="15dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">	                  
+	                  <FrameLayout android:layout_width="32dp" android:layout_height="32dp" android:layout_marginLeft="5dp" android:layout_marginRight="15dp" android:layout_marginTop="2dp" android:background="@drawable/info_no">
+	                      <TextView android:text="1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="22sp" android:textColor="#10a6a0" android:layout_gravity="center" android:layout_marginBottom="3dp" />
+	                  </FrameLayout>	                  
+	                  <TextView android:text="@string/greetings" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="14sp" android:textColor="#676767" android:lineSpacingExtra="2dp" />
+	              </LinearLayout>
+	              <!-- item -->
+	              
+	              <!-- item -->
+	              <LinearLayout android:layout_margin="15dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">	                  
+	                  <FrameLayout android:layout_width="32dp" android:layout_height="32dp" android:layout_marginLeft="5dp" android:layout_marginRight="15dp" android:layout_marginTop="2dp" android:background="@drawable/info_no">
+	                      <TextView android:text="2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="22sp" android:textColor="#10a6a0" android:layout_gravity="center" android:layout_marginBottom="3dp" />
+	                  </FrameLayout>
+	                  <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical">
+	                      <TextView android:text="@string/settings_usage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="14sp" android:textColor="#676767" android:lineSpacingExtra="2dp" />	                      
+	                  </LinearLayout>	                  	                  
+	              </LinearLayout>
+	              <!-- item -->	
+	              
+	              <!-- item -->
+	              <LinearLayout android:layout_margin="15dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">	                  
+	                  <FrameLayout android:layout_width="32dp" android:layout_height="32dp" android:layout_marginLeft="5dp" android:layout_marginRight="15dp" android:layout_marginTop="2dp" android:background="@drawable/info_no">
+	                      <TextView android:text="3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="22sp" android:textColor="#10a6a0" android:layout_gravity="center" android:layout_marginBottom="3dp" />
+	                  </FrameLayout>	
+	                  <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical">	                      
+	                      <TextView android:text="@string/record_usage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="14sp" android:textColor="#676767" android:lineSpacingExtra="2dp" />
+	                  </LinearLayout>	                                    	                  
+	              </LinearLayout>
+	              <!-- item -->	
+	              
+	              <!-- item -->
+	              <LinearLayout android:layout_margin="15dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">	                  
+	                  <FrameLayout android:layout_width="32dp" android:layout_height="32dp" android:layout_marginLeft="5dp" android:layout_marginRight="15dp" android:layout_marginTop="2dp" android:background="@drawable/info_no">
+	                      <TextView android:text="4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="22sp" android:textColor="#10a6a0" android:layout_gravity="center" android:layout_marginBottom="3dp" />
+	                  </FrameLayout>	
+	                  <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical">	                      
+	                      <TextView android:text="@string/view_usage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="14sp" android:textColor="#676767" android:lineSpacingExtra="2dp" />	                      
+	                  </LinearLayout>	                                    	                  
+	              </LinearLayout>
+	              <!-- item -->
+	              	              
+	              
+	              
+	              <!-- item -->
+	              <LinearLayout android:layout_margin="15dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">	                  
+	                  <FrameLayout android:layout_width="32dp" android:layout_height="32dp" android:layout_marginLeft="5dp" android:layout_marginRight="15dp" android:layout_marginTop="2dp" android:background="@drawable/info_no">
+	                      <TextView android:text="5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="22sp" android:textColor="#10a6a0" android:layout_gravity="center" android:layout_marginBottom="3dp" />
+	                  </FrameLayout>	
+	                  <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical">	                      
+	                      <TextView android:text="@string/settings_usage_note" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="14sp" android:textColor="#676767" android:lineSpacingExtra="2dp" />
+	                      <TextView android:text="@string/record_usage_first_note" android:layout_marginTop="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="14sp" android:textColor="#676767" android:lineSpacingExtra="2dp" />
+	                      <TextView android:text="@string/record_usage_second_note" android:layout_marginTop="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="14sp" android:textColor="#676767" android:lineSpacingExtra="2dp" />
+	                      <TextView android:text="@string/delete_usage_note" android:layout_marginTop="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="14sp" android:textColor="#676767" android:lineSpacingExtra="2dp" />
+	                      <TextView android:text="@string/recording_info_note" android:layout_marginTop="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="14sp" android:textColor="#676767" android:lineSpacingExtra="2dp" />	                      	                      	                      	                      
+	                  </LinearLayout>	                                    	                  
+	              </LinearLayout>
+	              <!-- item -->
+	              
+	              
+	              <!-- share -->
+	              <FrameLayout android:layout_width="match_parent" android:layout_height="1dp" android:layout_margin="15dp" android:background="#e3e3e3" />
+	              
+	              <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginTop="10dp" android:layout_marginBottom="25dp">
+	                  <LinearLayout android:id="@+id/shareAppBTN" android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" android:background="@drawable/share_button_back" android:clickable="true" android:layout_gravity="center_horizontal">
+	                      <ImageView android:src="@drawable/arrow419_green" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/app_name" />
+	                      <TextView android:text="@string/share_app" android:textColor="#10a6a0" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center_vertical" android:layout_marginLeft="7dp" />
+	                  </LinearLayout>
+	                  <TextView android:text="@string/share_app_text" android:layout_marginTop="10dp" android:layout_width="200dp" android:layout_height="wrap_content" android:textSize="12sp" android:textColor="#a3a3a3" android:lineSpacingExtra="2dp" android:layout_gravity="center_horizontal" android:gravity="center" />
+	              </LinearLayout>
+	              	              	              
+	              <!-- /share -->	              	              	   
+	              	                                                     	             
+	              
+	          </LinearLayout>	                      		            
+	        </ScrollView>
+	        <!-- info content -->	        
+        
+	        <!-- top actionbar -->
+	        <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content" 
+	            android:background="#F2FFFFFF" android:padding="8dp">
+	        	<FrameLayout android:id="@+id/infoBackBTN" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/back_button_white" android:clickable="true">
+	        	    <ImageView android:src="@drawable/arrow427" android:contentDescription="@string/back" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+	        	</FrameLayout> 
+	        	<TextView android:text="@string/title_activity_info" android:textSize="16sp" android:textColor="#000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center" />           
+	        </FrameLayout>
+	        <!-- top actionbar -->	                	    
+	    
+    </FrameLayout>
+    <!-- /INFO VIEW -->
+
+</FrameLayout>

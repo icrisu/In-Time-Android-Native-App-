@@ -1,0 +1,73 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="@drawable/single_movie_background"
+    tools:context="net.mobileblizzard.intime.MovieSingle" >
+
+        <!-- MOVIE VIEW -->
+    <FrameLayout android:id="@+id/moviesView" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">
+
+	        
+	        <FrameLayout android:id="@+id/movieContainerUI" android:layout_width="match_parent" android:layout_height="match_parent">
+	        <!-- video view -->
+	       	<VideoView android:id="@+id/videoViewUI" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_gravity="center"/>	            
+	        </FrameLayout>
+	        
+	        <!-- top actionbar -->
+	        <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content" 
+	            android:background="#CC000000" android:padding="8dp">
+	       		<TextView android:id="@+id/actionBarTitle" android:text="@string/title_activity_movies" android:textSize="16sp" android:textColor="#f5f5f5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center" />
+	        	
+	        	<FrameLayout android:id="@+id/movieBackBTN" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/back_button_white" android:clickable="true">
+	        	    <ImageView android:src="@drawable/arrow_close" android:contentDescription="@string/back" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+	        	</FrameLayout>
+	        	<FrameLayout android:id="@+id/movieDeleteBTN" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/back_button_white" android:clickable="true" android:layout_gravity="right">
+	        	    <ImageView android:src="@drawable/waste2" android:contentDescription="@string/back" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+	        	</FrameLayout>	        	 	        	           
+	        </FrameLayout>
+	        <!-- top actionbar -->	        
+	       	
+	       	<!-- share view -->
+	       	<FrameLayout android:id="@+id/shareVideoBTN" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/share_button" android:layout_gravity="bottom" android:padding="3dp" android:clickable="true">
+	       	    <ImageView android:src="@drawable/arrow419" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/app_name" />
+	       	</FrameLayout>	                	    
+	    
+    </FrameLayout>
+    <!-- /MOVIE VIEW -->    
+
+
+    <!-- confirmUI -->
+    <FrameLayout android:id="@+id/confirmChooserUI" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:clickable="true">
+	    <FrameLayout android:id="@+id/confirmChooserUIBlack" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="#D9000000" android:layout_gravity="center_vertical">
+	        <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:scrollbars="none">
+	            <LinearLayout android:padding="30dp" android:id="@+id/confirmChooserUIContent" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+	                
+	                <TextView android:id="@+id/confirmInfo" android:layout_width="200dp" android:layout_height="match_parent" android:gravity="center" android:layout_gravity="center_horizontal" android:textColor="#FFFFFF" />
+	                <FrameLayout android:layout_width="150dp" android:layout_height="1px" android:background="#4De4e4e4" android:layout_marginTop="15dp" android:layout_marginBottom="15dp" android:layout_gravity="center_horizontal"></FrameLayout>
+	                
+	                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+	                    <FrameLayout android:layout_width="1dp" android:layout_height="wrap_content" android:layout_weight="1">
+	                        <FrameLayout android:id="@+id/yesBTN" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="right" android:layout_marginRight="20dp" android:padding="10dp" android:clickable="true" android:background="@drawable/yes_no_button">
+	                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/yes" android:textColor="#FFFFFF"/>
+	                        </FrameLayout>
+	                    </FrameLayout>
+	                    
+	                    <FrameLayout android:layout_width="1dp" android:layout_height="wrap_content" android:layout_weight="1">
+	                        <FrameLayout android:id="@+id/noBTN" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="left" android:layout_marginLeft="20dp" android:padding="10dp" android:clickable="true" android:background="@drawable/yes_no_button">
+	                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/no" android:textColor="#FFFFFF"/>
+	                        </FrameLayout>
+	                    </FrameLayout>	                    
+	                    
+	                </LinearLayout>
+	                
+	            </LinearLayout>
+	        </ScrollView>
+	        <FrameLayout android:id="@+id/closeConfirmChooserUI" android:layout_width="wrap_content" android:layout_height="wrap_content" android:padding="5dp" android:layout_gravity="right">
+	            <ImageView android:src="@drawable/cross37" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/app_name" />
+	        </FrameLayout>
+	    </FrameLayout>	        
+    </FrameLayout>
+    <!-- /confirmUI -->
+
+
+</FrameLayout>
